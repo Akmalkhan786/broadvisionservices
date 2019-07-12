@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="img/rsz_mlogo.png">
+  <title>Mizuxe Template</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/navbar-fixed.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script>
+    $(document).on('scroll', function () {
+      let scrollDistance = $(this).scrollTop();
+      if (scrollDistance > 1){
+        $('.scroll-to-top').fadeIn(500);
+      } else if (scrollDistance < 1){
+        $('.scroll-to-top').fadeOut(500);
+      }
+    });
+    // Smooth scrolling using jQuery easing
+    $(document).on('click', 'a.scroll-to-top', function(e) {
+      let $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top)
+      }, 1000, 'easeInOutExpo');
+      e.preventDefault();
+    });
+  </script>
+</head>
+<body id="page-top">
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top py-4">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/mlogo.png" width="50" height="50" alt="">
+        <h3 class="d-inline align-middle">Mizuxe</h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#mizuxeNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mizuxeNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="#boxes" class="nav-link">Services</a></li>
+        </ul>
+        <a href="tel:18447572826" class="btn btn-primary ml-2 make-me-call-btn">Make Me Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- showcase -->
+  <section id="showcase" class="py-5">
+    <div class="primary-overlay text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <h1 class="display-2 mt-5 pt-5">
+              So what you dream of...
+            </h1>
+            <p class="lead">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+            <a href="#" class="btn btn-outline-secondary btn-lg text-white">
+             <i class="fa fa-arrow-right"></i> Read More</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/rsz_spectrum_36757597_ver10.png" alt="" class="img-fluid d-lg-block spectrum-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter -->
+<!--  <section id="newsletter" class="bg-dark text-white py-5">-->
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-4">-->
+<!--          <input type="text" class="form-control form-control-lg"-->
+<!--          placeholder="Enter Name">-->
+<!--        </div>-->
+<!--        <div class="col-md-4">-->
+<!--          <input type="text" class="form-control form-control-lg"-->
+<!--          placeholder="Enter Email">-->
+<!--        </div>-->
+<!--        <div class="col-md-4">-->
+<!--          <button class="btn btn-primary btn-lg btn-block">-->
+<!--            <i class="fa fa-envelope-open-o"></i> Subscribe</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- boxes -->
+  <section id="boxes" class="pricing py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="text-center pb-4">Combine TV, Internet, and Voice for the best deal</h2>
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">From</h5>
+              <h6 class="card-price text-center">$99<span class="period">/month</span></h6>
+              <hr>
+              <h4 class="text-center font-weight-bold">Get a great price when you bundle!</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>125+ channels plus FREE HD</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Thousands of On Demand choices</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>TV on-the-go with the Spectrum TV App</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>100 Mbps Internet starting speeds
+                  (wireless speeds may vary)</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited nationwide calling</li>
+              </ul>
+              <p class="text-muted">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <a href="#" class="btn btn-block btn-primary text-uppercase shop-now-btn-style">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">From</h5>
+              <h6 class="card-price text-center">$119<span class="period">/month</span></h6>
+              <hr>
+              <h4 class="text-center font-weight-bold">More channels for a great value!</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>175+ channels plus FREE HD</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Thousands of On Demand choices</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>TV on-the-go with the Spectrum TV App</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>100 Mbps Internet starting speeds
+                  (wireless speeds may vary)</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited nationwide calling</li>
+              </ul>
+              <p class="text-muted">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <a href="#" class="btn btn-block btn-primary text-uppercase shop-now-btn-style">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">From</h5>
+              <h6 class="card-price text-center">$139<span class="period">/month</span></h6>
+              <hr>
+              <h4 class="text-center font-weight-bold">The most channels for the best deal!</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>200+ channels plus FREE HD</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Thousands of On Demand choices</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>TV on-the-go with the Spectrum TV App</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>100 Mbps Internet starting speeds
+                  (wireless speeds may vary)</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited nationwide calling</li>
+              </ul>
+              <p class="text-muted">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <a href="#" class="btn btn-block btn-primary text-uppercase shop-now-btn-style">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about/why -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="pb-5">All the benefits you want for the best TV, Internet, and Voice experience</h2>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="img/tv.png" alt="tv">
+          <h4 class="pt-5 text-uppercase font-weight-bold">Free Hd</h4>
+          <p class="text-center icons-tv-section-style">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="img/remote.png" alt="remote">
+          <h4 class="pt-5 text-capitalize font-weight-bold">TV On Demand</h4>
+          <p class="text-center icons-tv-section-style">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="img/wifi.png" alt="wifi">
+          <h4 class="pt-5 text-capitalize font-weight-bold">Fastest In-Home WiFi</h4>
+          <p class="text-center icons-tv-section-style">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="img/dollar.png" alt="dollar">
+          <h4 class="pt-5 text-capitalize font-weight-bold">Contract Buyout</h4>
+          <p class="text-center icons-tv-section-style">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 tv-side-rows">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="font-weight-bold">With the Spectrum TV App, every screen is a TV screen</h2>
+          <h5 class="font-weight-bold pt-3">Watch live TV or On Demand</h5>
+          <p class="icons-tv-section-style py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+          <a href="#" class="btn btn-primary shop-now-btn-style">Shop Now</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/tv-room.jpg" alt="tv-room" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 tv-side-rows bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/responsive-tv-1.png" alt="tv-room" class="img-fluid rounded">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="font-weight-bold">Get the best with Spectrum TV, Internet, and Voice</h2>
+          <p class="icons-tv-section-style py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+          <a href="#" class="btn btn-primary shop-now-btn-style">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- authors -->
+  <section id="authors" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="pb-3">Meet Our Team</h1>
+            <p class="lead">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle mb-3 w-50">
+              <h3>Steve Smith</h3>
+              <h5 class="text-muted">Web Developer</h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle mb-3 w-50">
+              <h3>John Mark</h3>
+              <h5 class="text-muted">Web Designer</h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle mb-3 w-50">
+              <h3>Sansa Stark</h3>
+              <h5 class="text-muted">Graphic Designer</h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle mb-3 w-50">
+              <h3>Susan Williams</h3>
+              <h5 class="text-muted">Lead Writer</h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              </p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                <div class="p-4"><a href="#"><i class="fa fa-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="main-footer" class="py-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-4">
+          <img src="img/mlogo.png" alt="footer logo" class="pb-3" style="width: 80px;">
+          <p class="text-white text-justify">We are an international technology company with the mission to help people make more confident decisions and choose products they'll love.</p>
+          <h5 class="text-white">&copy;2019 Mizuxe.</h5>
+          <h5 class="text-white pt-2">All rights reserved</h5>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading-style">Our Products</h5>
+          <a href="#">Commerce & Sales</a>
+          <a href="#">Marketing</a>
+          <a href="#">Customer Service</a>
+          <a href="#">Advice Chatbot</a>
+          <a href="#">Omnichannel</a>
+          <a href="#">Examples</a>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading-style">Industry Solutions</h5>
+          <a href="#">Retail</a>
+          <a href="#">Brand Manufacturing</a>
+          <a href="#">Fashion and Lifestyle</a>
+          <a href="#">Telecommunications</a>
+          <a href="#">B2B Commerce</a>
+          <a href="#">Banking and Finance</a>
+          <a href="#">Premium Services</a>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading-style">Company</h5>
+          <a href="#">Management</a>
+          <a href="#">Careers</a>
+          <a href="#">Media Center</a>
+          <a href="#">Become a Partner</a>
+          <a href="#">Blog</a>
+          <a href="#">Technology</a>
+          <a href="#">Technology Updates</a>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading-style">Get in Touch</h5>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">30-Day Free Trial</a>
+          <a href="#">See a Demo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!--  Scroll to Top Button -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up" style="font-weight: 900;"></i>
+  </a>
+</body>
+</html>
